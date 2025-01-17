@@ -105,7 +105,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_km_label"/>
 
     <Button
-        android:id="@+id/novo_calculo"
+        android:id="@+id/btn_novo_calculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

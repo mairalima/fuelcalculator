@@ -27,5 +27,12 @@ class ResultadoActivity : AppCompatActivity() {
         binding.tvTotalConsumo.text = consumo.toString()
         binding.tvTotalKm.text = distancia.toString()
         binding.tvResult.text = custoTotal.toString()
+
+        binding.btnNovoCalculo.setOnClickListener{
+            finish()
+
+        }
+
+
         }
     }
