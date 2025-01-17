@@ -57,18 +57,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titlle" />
-        
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
 
 
     <Button
         android:id="@+id/btn_resultado"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        app:layout_goneMarginTop="16dp"
         android:text="Resultado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/til_destino"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/til_destino" />
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="Limpar"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/til_destino"
+        app:layout_constraintTop_toBottomOf="@+id/til_destino" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_combustivel"
@@ -83,6 +103,7 @@
             android:id="@+id/tie_combustivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="Ex:1.70" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,6 +120,7 @@
             android:id="@+id/tie_consulmo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="Ex: 5KM/l" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,6 +137,7 @@
             android:id="@+id/tie_destino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="Ex: 150KM" />
     </com.google.android.material.textfield.TextInputLayout>
 
