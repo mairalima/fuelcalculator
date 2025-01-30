@@ -45,7 +45,7 @@ import com.google.android.material.textfield.TextInputEditText
 
                         var totalTemp = distancia / consumo
                         var custoTotal= totalTemp * precocb
-                        println("Maira" + custoTotal)
+
 
                         var intent = Intent(this, ResultadoActivity::class.java)
                         intent.apply {

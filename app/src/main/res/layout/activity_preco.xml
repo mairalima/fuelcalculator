@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Preço do Combustivel"
+        android:text="Gas/Fuel Price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
 
@@ -22,28 +22,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Consumo do Carro"
+        android:text="Fuel Efficiency"
         app:layout_constraintEnd_toEndOf="@+id/tv_preco_cb"
         app:layout_constraintStart_toStartOf="@+id/tv_preco_cb"
-        app:layout_constraintTop_toBottomOf="@+id/til_combustivel" /> />
+        app:layout_constraintTop_toBottomOf="@+id/til_combustivel" />
+
 
     <TextView
         android:id="@+id/tv_destino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Distancia até o Destino"
+        android:text="Trip Distance"
         app:layout_constraintEnd_toEndOf="@+id/tv_preco_cb"
         app:layout_constraintStart_toStartOf="@+id/tv_preco_cb"
         app:layout_constraintTop_toBottomOf="@+id/til_consumo" />
 
     <TextView
         android:id="@+id/tv_titlle"
-        android:text="FuelCalculator"
+        android:text="Fuel Calculator"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -53,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Preencha os campos abaixo Para realizar o Calculo da sua conta"
+        android:text="Fill in the fields below to calculate your bill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titlle" />
@@ -73,19 +74,20 @@
         android:layout_marginTop="8dp"
         android:layout_marginStart="4dp"
         app:layout_goneMarginTop="16dp"
-        android:text="Resultado"
+        android:text="Calculate"
         app:layout_constraintEnd_toEndOf="@+id/til_destino"
         app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/til_destino" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clean"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_goneMarginTop="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
-        android:text="Limpar"
+        android:text="Clean"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/til_destino"
         app:layout_constraintTop_toBottomOf="@+id/til_destino" />
@@ -95,6 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_preco_cb">
@@ -103,6 +106,7 @@
             android:id="@+id/tie_combustivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:inputType="numberDecimal"
             android:hint="Ex:1.70" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -112,6 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_consumo">
@@ -120,6 +125,7 @@
             android:id="@+id/tie_consulmo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:inputType="numberDecimal"
             android:hint="Ex: 5KM/l" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -129,6 +135,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_destino">
@@ -137,6 +144,7 @@
             android:id="@+id/tie_destino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:inputType="numberDecimal"
             android:hint="Ex: 150KM" />
     </com.google.android.material.textfield.TextInputLayout>

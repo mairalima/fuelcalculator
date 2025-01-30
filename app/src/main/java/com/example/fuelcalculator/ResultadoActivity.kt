@@ -23,10 +23,10 @@ class ResultadoActivity : AppCompatActivity() {
         var distancia = intent.getFloatExtra("distancia", 0.0f)
         var custoTotal = intent.getFloatExtra("custoTotal", 0.0f)
 
-        binding.tvTotalPreco.text = precocb.toString()
+        binding.tvTotalPreco.text = "$" + precocb.toString()
         binding.tvTotalConsumo.text = consumo.toString()
         binding.tvTotalKm.text = distancia.toString()
-        binding.tvResult.text = custoTotal.toString()
+        binding.tvResult.text = "$" + custoTotal.toString()
 
         binding.btnNovoCalculo.setOnClickListener{
             finish()
